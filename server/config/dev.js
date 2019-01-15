@@ -1,3 +1,3 @@
 module.exports = {
-    mongoURI: "mongodb://localhost/Shopify-Backend",
+    mongoURI: "mongodb://localhost/Shopify-Backend"
 };

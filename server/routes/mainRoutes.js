@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Product = mongoose.model('product')
 
 module.exports = (app) => {
+    
     app.post('/api/demo', async (req,res) => {
         const apple = new Product({
             title: "apple",
@@ -61,5 +62,9 @@ module.exports = (app) => {
             const newItem = await item.save();
             res.send({success:'purchase complete', product: newItem})
         }
+    });
+
+    app.get('/', (req, res) => {
+        res.send('<h1>Daniel Wang Shopify Summer 2019 Back-end Challenge</h1>')
     });
 }
