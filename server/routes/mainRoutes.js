@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Product = mongoose.model('product')
 
 module.exports = (app) => {
-    app.get('/api/demo', async (req,res) => {
+    app.post('/api/demo', async (req,res) => {
         const apple = new Product({
             title: "apple",
             price: 1,
@@ -42,7 +42,6 @@ module.exports = (app) => {
     });
 
     app.get('/api/products/single/:id', async (req,res) =>{
-        console.log("asd")
         var item = await Product.findOne({ title: req.params.id })
         if (!item){
             res.status(400).send({error:'cannot find product'})

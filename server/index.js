@@ -13,5 +13,5 @@ app.use(bodyParser.json()); //bodyparser parses the JSON req body so that it can
 
 require('./routes/mainRoutes')(app); //add the routes onto the app object
 
-const PORT = keys.localHostPort; //retrieves the port from config file
+const PORT = process.env.PORT || 5000; ; //retrieves the port from config file
 app.listen(PORT); //starts up the server
