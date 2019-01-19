@@ -4,7 +4,7 @@ Back-end Developer coding challenge for Shopify Summer 2019 Internship
 I built this application justing NodeJS, ExpressJS and MongoDB
 
 I have hosted this application at https://shopifysummer2019.herokuapp.com/. You can interact with it and test out the required functions
-with Postman or something similar. If you wish to setup a localserver, the existing code in the repository supports.
+with Postman or something similar. If you wish to setup a localserver, the existing code in the repository supports it.
 
 The test server I have setup contains the following products that can be used for testing purposes:
   
@@ -28,7 +28,7 @@ grape:
 Routes:
 
 Route to retrieve the products:
-- POST request to route '/api/products/:option'
+- GET request to route '/api/products/:option'
   - please pass in 'available' in place of 'option' to retrieve only the products that are in stock.
     - eg. '/api/products/available'
   - please pass in 'all' in place of 'option' to retrieve all the products.
@@ -36,7 +36,7 @@ Route to retrieve the products:
   - If an invalid command is passed in, the api will return an error message 'invalid command' with status code 400.
 
 Route to retrieve a product by ID:
-- POST request to route '/api/products/single/:id'
+- GET request to route '/api/products/single/:id'
   - please replace 'id' with the title of a product that is present in the store.
     - eg. '/api/products/single/apple'
   - If the product cannot be found, it will return back a error message stating 'cannot find product' with status code 400.
