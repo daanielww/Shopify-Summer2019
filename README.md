@@ -4,7 +4,7 @@ Back-end Developer coding challenge for Shopify Summer 2019 Internship
 I built this application justing NodeJS, ExpressJS and MongoDB
 
 I have hosted this application at https://shopifysummer2019.herokuapp.com/. You can interact with it and test out the required functions
-with Postman or something similar. If you wish to setup a localserver, the existing code in the repository supports it.
+with POSTMAN or something similar. If you wish to setup a localserver, the existing code in the repository supports it.
 
 The test server I have setup contains the following products that can be used for testing purposes:
   
