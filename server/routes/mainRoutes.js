@@ -3,7 +3,10 @@ const Product = mongoose.model('product')
 
 module.exports = (app) => {
     
+    //route to setup demo database
     app.post('/api/demo', async (req,res) => {
+        await Product.collection.drop()
+
         const apple = new Product({
             title: "apple",
             price: 1,
@@ -29,6 +32,7 @@ module.exports = (app) => {
         res.send({success:"demo database setup complete"})
     });
     
+    //api route for retrieving all or only available items
     app.get('/api/products/:option', async (req,res) => {
         const option = req.params.option
         if (option == "available"){
@@ -42,6 +46,7 @@ module.exports = (app) => {
         res.send(products)
     });
 
+    //api route for getting single item by id
     app.get('/api/products/single/:id', async (req,res) =>{
         var item = await Product.findOne({ title: req.params.id })
         if (!item){
@@ -51,6 +56,7 @@ module.exports = (app) => {
         }
     });
 
+    //api route for item purchases
     app.post('/api/products/:id/purchase', async (req,res) =>{
         var item = await Product.findOne({ title: req.params.id })
         if (!item) {
@@ -64,6 +70,7 @@ module.exports = (app) => {
         }
     });
 
+    //root route
     app.get('/', (req, res) => {
         res.send('<h1>Daniel Wang Shopify Summer 2019 Back-end Challenge</h1>')
     });
