@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const bodyParser = require('body-parser');
 require('./models/Product')
+require('./models/Cart')
 
 mongoose.connect(keys.mongoURI); //connect to mongoDB database
 
