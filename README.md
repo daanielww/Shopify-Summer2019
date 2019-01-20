@@ -56,6 +56,7 @@ Route to purchase product by ID:
 Route to setup Database:
 - POST request to route '/api/demo'
   - This route will delete the 'products' collection and create a new one filled with the values I've outlined above.
+  - This route will also delete the Carts.
   - This route is used to setup/reset the database to contain the values I listed above.
   - Feel free to use or change the route to suit your testing needs.
 
