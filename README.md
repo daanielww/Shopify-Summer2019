@@ -1,10 +1,12 @@
 # Shopify-Summer2019
 Back-end Developer coding challenge for Shopify Summer 2019 Internship
 
-I built this application justing NodeJS, ExpressJS and MongoDB
+I built this application using NodeJS, ExpressJS and MongoDB
 
 I have hosted this application at https://shopifysummer2019.herokuapp.com/. You can interact with it and test out the required functions
-with POSTMAN or something similar. If you wish to setup a localserver, the existing code in the repository supports it.
+with POSTMAN or something similar. 
+
+If you wish to setup a local server, the existing code in the repository supports it, it is currently set up to start on localhost:5000 with MongoDB starting on its default port(27017). Note: if you do decide to run a local server, you will have to hit the '/api/demo' route (explained below) to fill the database with some values. Mongo is set up right now to create a database called 'Shopify-Backend' and a collection 'products'
 
 The test server I have setup contains the following products that can be used for testing purposes:
   
@@ -51,5 +53,6 @@ Route to purchase product by ID:
 
 Route to setup Database:
 - POST request to route '/api/demo'
+  - This route will delete the 'products' collection and create a new one filled with the values I've outlined above.
   - This route is used to setup/reset the database to contain the values I listed above.
   - Feel free to use or change the route to suit your testing needs.
